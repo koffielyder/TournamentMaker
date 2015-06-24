@@ -162,7 +162,15 @@
 
         										<th>Summname</th>
 
+                                                <th>Server</th>
+
         										<th>Team</th>
+
+                                                <th>Captain?</th>
+
+                                                <th>IP adress</th>
+
+                                                <th>Role</th>
 
         										<th>Email</th>
 
@@ -177,7 +185,15 @@
 
         										<td>Lantaarnappel</td>
 
+                                                <td>Server</td>
+
         										<td>TSM</td>
+
+                                                <td>No</td>
+
+                                                <td>127.0.0.1</td>
+
+                                                <td>Role</td>
 
         										<td>Email</td>
 
