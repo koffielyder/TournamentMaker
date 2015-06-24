@@ -15,10 +15,10 @@ class Teams extends Migration
         Schema::create('teams', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
-            $table->interger('captain_id');
+            $table->integer('captain_id');
             $table->rememberToken();
             $table->timestamps();
-            $table->tinyint('active');
+            $table->boolean('active');
         });
     }
 

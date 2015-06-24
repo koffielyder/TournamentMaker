@@ -12,11 +12,11 @@ class UserAlerts extends Migration
      */
     public function up()
     {
-        Schema::create('teams', function (Blueprint $table) {
+        Schema::create('user_alerts', function (Blueprint $table) {
             $table->increments('id');
-            $table->interger('alert_id');
-            $table->interger('user_id');
-            $table->interger('team_id');
+            $table->integer('alert_id');
+            $table->integer('user_id');
+            $table->integer('team_id');
             $table->timestamps();
         });
     }

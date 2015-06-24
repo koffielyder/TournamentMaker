@@ -12,8 +12,10 @@ class Alert extends Migration
      */
     public function up()
     {
-        $table->increments('id');
-        $table->string('name');
+        Schema::create('alert', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+        });
     }
 
     /**
