@@ -47,7 +47,7 @@
 
                           <div class="form-group">
                             <div class="col-sm-offset-4 col-sm-10">
-                              <button type="submit" class="btn btn-default">Login</button>
+                              <button type="submit" class="btn btn-default">Login</button><a class="btn btn-link" href="{{ url('/password/email') }}">Forgot Your Password?</a>
                             </div>
                           </div>
 
