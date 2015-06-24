@@ -75,8 +75,10 @@
                     @if (Auth::user()->team_id > 0)
                         <div class="panel-body">
                             <h2>{{ $team->name }}</h2>
-                            <div id="editteamalert" class="alert alert-info alert-block fade">
+                            <div id="editteamalert" class="alert alert-info alert-block fade collapse">
                               <a href="#" type="button" class="close">&times;</a>
+
+                              <center>Edit your team '{{ $team->name }}'</center>
                               <div class="row">
 
                                   <form class="form-horizontal" role="form">
