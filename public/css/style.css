@@ -11,6 +11,10 @@ body {
 .navbar {
     margin-bottom: 0px;
 }
+/* First letter gets capitalized */
+.nav-name{
+    text-transform: capitalize;
+}
 .divider{
     padding-top: 1px;
     padding-bottom: 1px;

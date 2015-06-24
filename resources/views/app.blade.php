@@ -88,7 +88,8 @@
                     <li><img class="img-responsive summonerpic" src="http://avatar.leagueoflegends.com/euw/{{ $summoner->name }}.png"></li>
 
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ $summoner->name }} <span class="caret"></span></a>
+                        <!-- First letter gets capitalized in css for clean looks -->
+                        <a class="dropdown-toggle nav-name" data-toggle="dropdown" href="#">{{ $summoner->name }} <span class="caret"></span></a>
 
                         <ul class="dropdown-menu">
                             <li>
@@ -107,9 +108,7 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
 
 	@yield('content')
 
@@ -121,6 +120,9 @@
       </div>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
 </body>
 </html>

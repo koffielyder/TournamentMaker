@@ -7,6 +7,7 @@
 @extends('app')
 
 @section('content')
+
     <div class="everything">
         <div class="container allpanels">
 
@@ -83,7 +84,6 @@
                               <div class="row">
 
                                   <form class="form-horizontal" role="form" method="POST" action="{{ url('/team/edit/' . $team->id) }}">
-                                <!--Nico zorg ff dat dit werkt en haal deze comment weg dan-->
                                   <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                   <div class="form-group">
                                     <label class="control-label col-sm-4" for="name"></label>
@@ -161,11 +161,15 @@
                     @else
                         <div class="panel-body">
                             <div class="alert alert-info">
-                                <center>Please do not create unneccesary teams</center>
                                 <div class="row">
 
                                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/team/create') }}">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                      <div class="form-group">
+                                        <div class="col-sm-7 col-sm-offset-4 ">
+                                            Please do not create unnecessary teams
+                                        </div>
+                                      </div>
                                       <div class="form-group">
                                         <label class="control-label col-sm-4" for="name">Team name</label>
                                         <div class="col-sm-7">
@@ -264,7 +268,7 @@
                     </div>
 
                     <div class="panel-body">
-                        <p>These are all regersted teams</p>
+                        <p>These are all registered teams</p>
                     </div><!-- Table -->
 
                     <table class="table">
