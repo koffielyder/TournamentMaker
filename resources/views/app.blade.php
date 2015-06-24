@@ -108,9 +108,10 @@
 
     <div id="footer" class="footer">
       <div class="container">
-          <h4>Made with love by Nico and Thom. <a href="https://github.com/koffielyder/TournamentMaker">See this project on github.</a></h4>
+        <p class="text-muted credit">Made with love by Nico and Thom. This site is in alpha. Copyright 2015.    <iframe src="https://ghbtns.com/github-btn.html?user=koffielyder&repo=TournamentMaker&type=star&count=true" frameborder="0" scrolling="0" width="160px" height="22px" class="gitwidget"></iframe></p>
       </div>
     </div>
+
 
 </body>
 </html>

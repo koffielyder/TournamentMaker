@@ -85,14 +85,12 @@ body {
 /* Set the fixed height of the footer here */
 #push,
 #footer {
-  height: 45px;
+  height: 60px;
 }
 #footer {
   background-color: #C8C8C8;
 }
-.footer .h4{
-    padding-top: 10px;
-}
+
 
 /* Lastly, apply responsive CSS fixes as necessary */
 @media (max-width: 767px) {
@@ -102,4 +100,13 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
+}
+
+.footer .container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+.container .credit {
+  margin: 15px 0;
 }
