@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Summoner extends Migration
+class UserAlerts extends Migration
 {
     /**
      * Run the migrations.
@@ -12,13 +12,11 @@ class Summoner extends Migration
      */
     public function up()
     {
-        Schema::create('summoners', function (Blueprint $table) {
+        Schema::create('teams', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unique();
-            $table->string('name');
-            $table->string('lane');
-            $table->integer('summoner_id')->unique();
-            $table->rememberToken();
+            $table->interger('alert_id');
+            $table->interger('user_id');
+            $table->interger('team_id');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class Summoner extends Migration
      */
     public function down()
     {
-        Schema::drop('summoners');
+        Schema::drop('user_alerts');
     }
 }
