@@ -169,8 +169,9 @@
                                 <th>Team</th>
 
                                 <th>Role</th>
-
-                                <th>Invite to team</th>
+                                @if ($captain == true)
+                                    <th>Invite to team</th>
+                                @endif
                             </tr>
                         </thead>
                         <tbody>
@@ -192,8 +193,9 @@
                                 ?></td>
 
                                 <td><?php $summoners = Summoners::findOrFail($user->summoner_id); echo $summoners->lane; ?></td>
-
-                                <td><button class="btn btn-default" type="button">Invite</button></td>
+                                @if (($captain == true) && ($user->id != Auth::User()->id) && ($user->team_id ==  0))
+                                    <td><button class="btn btn-default" type="button">Invite</button></td>
+                                @endif
                             </tr>
                         @endforeach
                         </tbody>
