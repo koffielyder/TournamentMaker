@@ -2,15 +2,7 @@
 <html lang="en">
 <head>
 <?php
-    use App\Summoners;
     use App\teams;
-    $count = 0;
-
-    foreach ($alerts as $alert) {
-        if ($alert->user_id == Auth::User()->id) {
-            $count++;
-        }
-    }
 ?>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -54,41 +46,11 @@
                         <a href="#"></a>
                     </li>
 
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="padding-top: 8px;">
-                            <button class="btn btn-default notifications" type="button">
-                              Messages <span class="badge">{{ $count }}</span>
-                            </button>
-                        </a>
-                        @if ($count != 0)
-                            <ul class="dropdown-menu">
-                                @foreach ($alerts as $alert)
-                                    @if ($alert->user_id == Auth::User()->id)
-                                        <?php $teaminfo = teams::findOrFail($alert->team_id); ?>
-                                        <li class="notification">
-                                            <a href="#" class="innernot">
-                                            <span class="glyphicon glyphicon-exclamation-sign"></span>
-                                             You've been invited to a team "{{ $teaminfo->name }}"
-                                            </a>
-                                            <div class="btn-group" role="group" aria-label="invite">
-                                              <a type="button" class="btn btn-default" href="{{ url('team/addmember/' . $alert->user_id . '/' . $alert->team_id) }}">Accept</a>
-                                              <a type="button" class="btn btn-default" href="#teams">View team</a>
-                                              <a type="button" class="btn btn-default">Decline</a>
-                                            </div>
-                                        </li>
-                                        <li class="divider"></li>
-                                    @endif
-                                @endforeach
-                            </ul>
-                        @endif
 
-
-                    </li>
-
-                    <li><img class="img-responsive summonerpic" src="http://avatar.leagueoflegends.com/euw/{{ $summoner->name }}.png"></li>
+                  
 
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ $summoner->name }} <span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ Auth::User()->name }} <span class="caret"></span></a>
 
                         <ul class="dropdown-menu">
                             <li>
