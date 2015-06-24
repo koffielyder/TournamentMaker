@@ -121,6 +121,6 @@ class TeamController extends Controller
 
         $team->delete();
 
-        return redirect('home');
+        return redirect('team/destroy/' . $user->id);
     }
 }
