@@ -303,10 +303,9 @@
                         </tbody>
                     </table>
                 </div>
-
-        </div><!-- /.container .allpanels -->
-    </div><!-- /.everything -->
-
+            </div>
+        </div>
+    </div>
 
 
 

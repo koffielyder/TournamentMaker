@@ -12,7 +12,6 @@
         }
     }
 ?>
-    
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,7 +26,6 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
-    <!-- Own css -->
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 	<link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 
@@ -85,7 +83,6 @@
                         @endif
 
 
-                        <!--Notification menu-->
                         <ul class="dropdown-menu">
                             <li class="notification">
 
@@ -128,22 +125,21 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
-
-    <!-- Page content -->
 	@yield('content')
 
+	<!-- Scripts -->
 
-	<!-- Footer -->
     <div id="footer" class="footer">
       <div class="container">
         <p class="text-muted credit">Made with love by Nico and Thom. This site is in alpha. Copyright 2015.    <iframe src="https://ghbtns.com/github-btn.html?user=koffielyder&repo=TournamentMaker&type=star&count=true" frameborder="0" scrolling="0" width="160px" height="22px" class="gitwidget"></iframe></p>
       </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
 </body>
 </html>
