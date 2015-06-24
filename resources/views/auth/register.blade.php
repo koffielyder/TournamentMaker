@@ -32,7 +32,7 @@
             <div class="panel panel-primary">
 
                 <div class="panel-heading scoreheader">
-                    Register <button class="btn btn-default pull-right" type="button">Login</button>
+                    Register <a class="btn btn-default pull-right" type="button" href="{{ url('/auth/login') }}">Login</a>
                 </div>
 
                 <div class="panel-body">

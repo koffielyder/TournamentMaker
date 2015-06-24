@@ -8,7 +8,7 @@
             <div class="panel panel-primary">
 
                 <div class="panel-heading scoreheader">
-                    Login <button class="btn btn-default pull-right" type="button">Register</button>
+                    Login <a class="btn btn-default pull-right" type="button" href="{{ url('/auth/register') }}">Register</a>
                 </div>
 
                 <div class="panel-body">
