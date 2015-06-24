@@ -1,6 +1,7 @@
 <?php
     use App\Summoners;
     use App\teams;
+    use App\User;
 ?>
 
 @extends('app')
@@ -263,14 +264,12 @@
                     </div>
 
                     <div class="panel-body">
-                        <p>Dit zijn alle teams en hun scores</p>
+                        <p>These are all regersted teams</p>
                     </div><!-- Table -->
 
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>Positie</th>
-
                                 <th>Team</th>
 
                                 <th>Aantal leden</th>
@@ -278,52 +277,28 @@
                                 <th>Leden</th>
 
                                 <th>Captain</th>
-
-                                <th>Join team</th>
+                                @if (Auth::User()->team_id == 0)
+                                    <th>Join team</th>
+                                @endif
                             </tr>
                         </thead>
 
                         <tbody>
+                        <?php $teams = teams::all(); $count = 0; ?>
+                        @foreach ($teams as $teaminfo)
                             <tr>
-                                <td>1</td>
+                                <td>{{ $teaminfo->name }}</td>
 
-                                <td>TSM</td>
+                                <td>@foreach ($users as $user) @if ($user->team_id == $teaminfo->id) <?php $count++; ?> @endif @endforeach {{$count}}</td>
 
-                                <td>4</td>
+                                <td><?php $user = User::where('team_id', '=', $teaminfo->id)->get() ?> @foreach ($user as $username) {{ $username->name }} @endforeach</td>
 
-                                <td>{{ $summoner->name }}</td>
-
-                                <td>John</td>
-
-                                <td><button class="btn btn-default" type="button">Join Team</button></td>
+                                <td><?php $captainname = User::findOrFail($teaminfo->captain_id) ?> {{ $captainname->name }}</td>
+                                @if (Auth::User()->team_id == 0)
+                                    <td><button class="btn btn-default" type="button">Join Team</button></td>
+                                @endif
                             </tr>
-
-                            <tr>
-                                <td>2</td>
-
-                                <td>SK</td>
-
-                                <td>3</td>
-
-                                <td>pietertje,karel,swek</td>
-
-                                <td>swek</td>
-
-                                <td><button class="btn btn-default" type="button">Join Team</button></td>
-                            </tr>
-
-                            <tr>
-                                <td>3</td>
-
-                                <td>Team</td>
-
-                                <td>2</td>
-
-                                <td>peter,hans</td>
-
-                                <td>hans</td>
-
-                                <td><button class="btn btn-default" type="button">Join Team</button></td>
+                        @endforeach
                             </tr>
                         </tbody>
                     </table>
