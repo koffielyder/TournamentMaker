@@ -40,9 +40,9 @@
 
                             <div class="col-sm-2 custom">
                             @if (Auth::user()->team_id > 0)
-                                <h4></h4>
+                                <h4>{{ $team->name }}</h4>
 
-                                <h4></h4>
+                                <h4>@if ($captain == true) Team captain @else Team member @endif</h4>
                             @endif
 
                                 <h4>{{ $summoner->lane }}</h4>
