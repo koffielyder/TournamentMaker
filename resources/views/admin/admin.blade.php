@@ -20,11 +20,24 @@
 
 
               <div role="tabpanel" class="tab-pane active home" id="home">
+                <div class="row">
+          		    <div class="col-md-12 col-admin">
+          				<div class="panel panel-primary">
+          					<div class="panel-heading">
+          						News
+          					</div>
+                            <div class="panel-body">
+                                Welcome to the admin panel.
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
         		<div class="row">
         			<div class="col-md-7 col-admin">
-
         				<div class="panel panel-primary">
-
         					<div class="panel-heading">
         						Latest new 10 players
         					</div>
@@ -130,10 +143,60 @@
 
 
             <div role="tabpanel" class="tab-pane" id="players">
-                players
+                <div class="row">
+        			<div class="col-md-12 col-admin">
+        				<div class="panel panel-primary">
+        					<div class="panel-heading">
+        						All players.
+        					</div>
+
+        					<div class="panel-body">
+        						<div class="row">
+        							<p>Here you can see all of the players.</p>
 
 
-            </div>
+        							<table class="table table-bordered">
+        								<thead>
+        									<tr>
+        										<th>Name</th>
+
+        										<th>Summname</th>
+
+        										<th>Team</th>
+
+        										<th>Email</th>
+
+        										<th class="adminoptions">Options</th>
+        									</tr>
+        								</thead>
+
+
+        								<tbody>
+        									<tr>
+        										<td>Thom</td>
+
+        										<td>Lantaarnappel</td>
+
+        										<td>TSM</td>
+
+        										<td>Email</td>
+
+        										<td class="adminoptions">
+                                                    <a class="btn btn-default adminbutton" href="" type="button">Info (edit)</a>
+                                                    <a class="btn btn-default adminbutton" href="" type="button">Ban</a>
+                                                    <a class="btn btn-default adminbutton" href="" type="button">Remove</a>
+                                                    <a class="btn btn-default adminbutton" href="" type="button">Kick from team</a>
+                                                    <a class="btn btn-default adminbutton" href="" type="button">Reset password</a>
+        										</td>
+        									</tr>
+        								</tbody>
+        							</table>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+                </div><!-- /.row -->
+            </div><!-- / players tab -->
 
             <div role="tabpanel" class="tab-pane" id="teams">
                 teams

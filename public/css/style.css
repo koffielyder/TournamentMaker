@@ -141,6 +141,10 @@ body {
     padding-left: 3px;
     padding-right: 3px;
 }
+.col-admin .panel-primary{
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
 .col-admin .panel-body{
     margin-left: 10px;
     margin-right: 10px;
@@ -148,10 +152,14 @@ body {
 .adminbutton{
     margin-left: 1px;
     margin-right: 0px;
+    margin-bottom: 0px;
     padding-right: 4px;
     padding-left: 4px;
     border-width: 2px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 .adminoptions{
     width: 440px;
+    padding-top: 1px;
 }
