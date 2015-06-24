@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php 
+<?php
     use App\Summoners;
-    use App\teams; 
+    use App\teams;
 ?>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,7 +31,7 @@
 	<![endif]-->
 </head>
 <body>
-	
+
     <nav class="navbar navbar-default">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -99,6 +99,12 @@
 	@yield('content')
 
 	<!-- Scripts -->
-	
+
+    <div id="footer">
+      <div class="container">
+          Shoutout naar mn moeder
+      </div>
+    </div>
+
 </body>
 </html>
