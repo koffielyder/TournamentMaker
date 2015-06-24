@@ -62,7 +62,6 @@
                               Messages <span class="badge">{{ $count }}</span>
                             </button>
                         </a>
-<<<<<<< HEAD
                         @if ($count != 0)
                             <ul class="dropdown-menu">
                                 @foreach ($alerts as $alert)
@@ -84,7 +83,7 @@
                                 @endforeach
                             </ul>
                         @endif
-=======
+
 
                         <!--Notification menu-->
                         <ul class="dropdown-menu">
@@ -102,7 +101,7 @@
                             </li>
 
                             <li class="divider"></li>
->>>>>>> origin/master
+
 
 
                     </li>
