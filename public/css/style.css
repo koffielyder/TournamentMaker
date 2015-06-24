@@ -123,3 +123,26 @@ body {
   -webkit-box-shadow: none;
 }
 
+
+/*Admin panel*/
+.container-admin{
+    width:85%;
+}
+.col-admin{
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.col-admin .panel-body{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.adminbutton{
+    margin-left: 1px;
+    margin-right: 0px;
+    padding-right: 4px;
+    padding-left: 4px;
+    border-width: 2px;
+}
+.adminoptions{
+    width: 440px;
+}
