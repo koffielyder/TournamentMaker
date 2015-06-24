@@ -100,9 +100,9 @@
 
 	<!-- Scripts -->
 
-    <div id="footer">
+    <div id="footer" class="footer">
       <div class="container">
-          Shoutout naar mn moeder
+          <center><h4>Made with love by Nico and Thom. <a href="https://github.com/koffielyder/TournamentMaker">See this project on github.</a></h4></center>
       </div>
     </div>
 
