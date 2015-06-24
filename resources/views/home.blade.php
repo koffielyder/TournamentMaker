@@ -76,7 +76,7 @@
                         <div class="panel-body">
                             <h2>{{ $team->name }}</h2>
                             <div id="editteamalert" class="alert alert-info alert-block fade collapse">
-                              <a href="#" type="button" class="close">&times;</a>
+                              <a type="button" class="close">&times;</a>
 
 
                               <div class="row">
