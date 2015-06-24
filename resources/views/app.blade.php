@@ -11,8 +11,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Tournament Maker</title>
 
-	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-	<link rel="stylesheet" href="{{ asset('/css/style.css') }}">
+
 
 	<!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -20,8 +19,8 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
-	<!-- Fonts -->
-	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+    <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+	<link rel="stylesheet" href="{{ asset('/css/style.css') }}">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -49,22 +48,24 @@
                     </li>
 
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-bell"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="padding-top: 8px;">
+                            <button class="btn btn-default notifications" type="button">
+                              Messages <span class="badge">2</span>
+                            </button>
+                        </a>
 
                         <ul class="dropdown-menu">
                             <li class="notification">
-                                <a href="#">
-                                Melding 1
+
+                                <a href="#" class="innernot">
+                                <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                 You've been kicked out of team Siren
                                 </a>
                             </li>
 
                             <li class="divider"></li>
 
-                            <li class="notification">
-                                <a href="#">
-                                Melding 2
-                                </a>
-                            </li>
+
 
                         </ul>
                     </li>
