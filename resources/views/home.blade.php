@@ -260,7 +260,7 @@
                     <!-- Default panel contents -->
 
                     <div class="panel-heading scoreheader">
-                        Scores & Teams <button class="btn btn-default pull-right" type="button">Leave current team</button>
+                        Teams
                     </div>
 
                     <div class="panel-body">
