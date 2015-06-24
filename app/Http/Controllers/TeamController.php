@@ -7,8 +7,10 @@ use App\Http\Controllers\Controller;
 
 use App\teams;
 use App\User;
+use App\user_alert;
 use Auth;
 use Request;
+
 
 class TeamController extends Controller
 {
@@ -123,10 +125,17 @@ class TeamController extends Controller
             if ($user->team_id == $team->id) {
                 $user->team_id = 0;
                 $user->save();
+
+                $input['user_id'] = $user->id;
+                $input['alert_id'] = 5;
+                $input['team_id'] = $team->id;
+
+                user_alert::create($input);
             }
         }
 
-        $team->delete();
+        $team->active = false;
+        $team->save();
 
         return redirect('home');
         

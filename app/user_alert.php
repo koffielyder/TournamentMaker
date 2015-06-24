@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class user_alert extends Model
 {
-    protected $fillable = ['alert_id', 'user_id'];
+    protected $fillable = ['alert_id', 'user_id', 'team_id'];
 }
