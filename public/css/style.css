@@ -12,7 +12,7 @@ body {
     margin-bottom: 0px;
 }
 /* First letter gets capitalized */
-.nav-name{
+.capitalize{
     text-transform: capitalize;
 }
 .divider{

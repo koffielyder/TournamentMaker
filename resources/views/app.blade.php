@@ -89,7 +89,7 @@
 
                     <li class="dropdown">
                         <!-- First letter gets capitalized in css for clean looks -->
-                        <a class="dropdown-toggle nav-name" data-toggle="dropdown" href="#">{{ $summoner->name }} <span class="caret"></span></a>
+                        <a class="dropdown-toggle capitalize" data-toggle="dropdown" href="#">{{ $summoner->name }} <span class="caret"></span></a>
 
                         <ul class="dropdown-menu">
                             <li>

@@ -23,7 +23,7 @@
                             <div class="col-sm-2"><img alt="Summoner icon" class="img-responsive profilepic thumbnail" src="http://avatar.leagueoflegends.com/euw/{{ $summoner->name }}.png"></div>
 
                             <div class="col-sm-4">
-                                <h1>{{ Auth::user()->name }}</h1>
+                                <h1 class="capitalize">{{ Auth::user()->name }}</h1>
 
                                 <h2>{{ $summoner->name }}</h2>
                             </div>
@@ -40,9 +40,9 @@
 
                             </div>
 
-                            <div class="col-sm-2 custom">
+                            <div class="col-sm-3 custom">
                             @if (Auth::user()->team_id > 0)
-                                <h4>{{ $team->name }}</h4>
+                                <h4 class="capitalize">{{ $team->name }}</h4>
 
                                 <h4>@if ($captain == true) Team captain @else Team member @endif</h4>
                             @endif
@@ -76,7 +76,7 @@
 
                     @if (Auth::user()->team_id > 0)
                         <div class="panel-body">
-                            <h2>{{ $team->name }}</h2>
+                            <h2 class="capitalize">{{ $team->name }}</h2>
                             <div id="editteamalert" class="alert alert-info alert-block fade collapse">
                               <a type="button" class="close">&times;</a>
 
@@ -147,7 +147,7 @@
                                @foreach ($users as $user)
                                 @if ($user->team_id == $team->id)
                                     <tr>
-                                        <td>{{ $user->name }}</td>
+                                        <td class="capitalize">{{ $user->name }}</td>
                                         <td><?php $summoners = Summoners::findOrFail($user->summoner_id); echo $summoners->name; ?></td>
                                         <td><?php $summoners = Summoners::findOrFail($user->summoner_id); echo $summoners->lane; ?></td>
                                         @if (($captain == true) && ($user->id != Auth::User()->id))
@@ -233,11 +233,11 @@
                         <tbody>
                         @foreach ($users as $user)
                             <tr>
-                                <td>{{ $user->name }}</td>
+                                <td class="capitalize">{{ $user->name }}</td>
 
                                 <td><?php $summoners = Summoners::findOrFail($user->summoner_id); echo $summoners->name; ?></td>
 
-                                <td><?php
+                                <td class="capitalize"><?php
                                         if ($user->team_id > 0) {
                                             $team = Teams::findOrFail($user->team_id);
                                             echo $team->name;
@@ -291,7 +291,7 @@
                         <?php $teams = teams::all(); $count = 0; ?>
                         @foreach ($teams as $teaminfo)
                             <tr>
-                                <td>{{ $teaminfo->name }}</td>
+                                <td class="capitalize">{{ $teaminfo->name }}</td>
 
                                 <td>@foreach ($users as $user) @if ($user->team_id == $teaminfo->id) <?php $count++; ?> @endif @endforeach {{$count}}</td>
 
