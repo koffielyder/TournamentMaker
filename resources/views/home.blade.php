@@ -1,6 +1,6 @@
-<?php 
+<?php
     use App\Summoners;
-    use App\teams; 
+    use App\teams;
 ?>
 
 @extends('app')
@@ -57,23 +57,58 @@
                     <!-- Default panel contents -->
 
                     <div class="panel-heading scoreheader">
-                        Team 
+                        Team
                         @if (Auth::user()->team_id > 0)
                             @if ($team->captain_id == Auth::user()->id)
-                                <a class="btn btn-default pull-right" type="button" href="{{ url('/team/delete') }}">Delete team</a> 
-                                <a class="btn btn-default pull-right" type="button">Edit team</a> 
+                                <a class="btn btn-default pull-right" type="button" href="{{ url('/team/delete') }}">Delete team</a>
+                                <a id="editteam" class="btn btn-default pull-right"  type="button">Edit team</a>
                             @else
                                 <a class="btn btn-default pull-right" type="button" href="team/leave">Leave team</a>
                             @endif
 
                         @else
-                            <a href="{{ url('/team/create') }}" class="btn btn-default pull-right" type="button">Create team</a> 
+                            <a href="{{ url('/team/create') }}" class="btn btn-default pull-right" type="button">Create team</a>
                         @endif
-                            
+
                     </div>
+
                     @if (Auth::user()->team_id > 0)
                         <div class="panel-body">
                             <h2>{{ $team->name }}</h2>
+                            <div id="editteamalert" class="alert alert-info alert-block fade">
+                              <a href="#" type="button" class="close">&times;</a>
+                              <div class="row">
+
+                                  <form class="form-horizontal" role="form">
+                                <!--Nico zorg ff dat dit werkt en haal deze comment weg dan-->
+                                  <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <div class="form-group">
+                                      <label class="control-label col-sm-4" for="name">Team name</label>
+                                      <div class="col-sm-7">
+                                        <input type="teamname" class="form-control" name="name" placeholder="Enter new team name" required>
+                                      </div>
+                                    </div>
+                                    <fieldset disabled>
+                                        <div class="form-group">
+                                          <label class="control-label col-sm-4" for="amount">5v5 or 3v3 (3v3 support soon™)</label>
+                                          <div class="col-sm-7">
+                                              <select id="amount" class="form-control">
+                                                  <option>5v5</option>
+                                              </select>
+                                          </div>
+                                        </div>
+                                    </fieldset>
+
+                                    <div class="form-group">
+                                      <div class="col-sm-offset-4 col-sm-10">
+                                        <a type="submit" class="btn btn-default">Create</a>
+                                      </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
                         </div>
                         <!-- Table -->
 
@@ -106,7 +141,7 @@
                             @endforeach
                             </tbody>
                         </table>
-                    @else 
+                    @else
                         <div class="panel-body">
                             <div class="alert alert-info">
                                 <center>Please do not create unneccesary teams</center>
@@ -146,7 +181,7 @@
 
                 </div>
 
-                
+
 
                 <div class="panel panel-primary">
                     <!-- Default panel contents -->
@@ -181,7 +216,7 @@
 
                                 <td><?php $summoners = Summoners::findOrFail($user->summoner_id); echo $summoners->name; ?></td>
 
-                                <td><?php 
+                                <td><?php
                                         if ($user->team_id > 0) {
                                             $team = Teams::findOrFail($user->team_id);
                                             echo $team->name;
@@ -202,7 +237,7 @@
                     </table>
                 </div>
 
-                
+
 
                 <div class="panel panel-primary">
                     <!-- Default panel contents -->
