@@ -93,9 +93,19 @@ class TeamController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update($id)
+    public function update($user_id, $team_id)
     {
-        //
+        $alerts = user_alert::all();
+        foreach ($alerts as $alert) {
+            if (($user_id == $alert->user_id) && ($team_id == $alert->team_id)) {
+                $user = User::findorfail($user_id);
+                $user->team_id = $team_id;
+                $user->save();
+
+                $alert->delete();
+            }
+        }
+        return redirect('home');
     }
 
     /**
@@ -146,5 +156,19 @@ class TeamController extends Controller
 
         return redirect('home');
         
+    }
+
+    public function invite($user_id)
+    {
+        $user = User::findorfail($user_id);
+        if ($user->team_id == 0) {
+            $input['alert_id'] = 1;
+            $input['user_id'] = $user_id;
+            $input['team_id'] = Auth::User()->team_id;
+
+            user_alert::create($input);
+        }
+
+        return redirect('home');
     }
 }

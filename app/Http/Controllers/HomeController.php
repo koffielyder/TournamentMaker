@@ -5,6 +5,7 @@ use Auth;
 use App\Summoners;
 use App\teams;
 use App\User;
+use App\user_alert;
 
 
 
@@ -56,6 +57,7 @@ class HomeController extends Controller {
 
 		$data['users'] = User::all();
 
+		$data['alerts'] = user_alert::all();
 		
 		return view('home', $data);
 	}

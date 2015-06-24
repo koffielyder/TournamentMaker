@@ -259,7 +259,7 @@
                 <div class="panel panel-primary">
                     <!-- Default panel contents -->
 
-                    <div class="panel-heading scoreheader">
+                    <div class="panel-heading scoreheader" id="teams">
                         Teams
                     </div>
 
