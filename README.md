@@ -3,4 +3,4 @@ Tournament maker is a website designed for creating League of Legends teams and 
 
 Tournament maker is currently in alpha, and not hosted anywhere. Our deadline is 7-7-2015.
 
-The program is created in Laravel with Bootstrap.
+The program is created in Laravel.

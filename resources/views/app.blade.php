@@ -83,24 +83,6 @@
                         @endif
 
 
-                        <ul class="dropdown-menu">
-                            <li class="notification">
-
-                                <a href="#" class="innernot">
-                                <span class="glyphicon glyphicon-exclamation-sign"></span>
-                                 You've been invited to team Siren
-                                </a>
-                                <div class="btn-group" role="group" aria-label="invite">
-                                  <button type="button" class="btn btn-default">Accept</button>
-                                  <button type="button" class="btn btn-default">View team</button>
-                                  <button type="button" class="btn btn-default">Decline</button>
-                                </div>
-                            </li>
-
-                            <li class="divider"></li>
-
-
-
                     </li>
 
                     <li><img class="img-responsive summonerpic" src="http://avatar.leagueoflegends.com/euw/{{ $summoner->name }}.png"></li>
@@ -127,8 +109,6 @@
     </nav>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
 	@yield('content')
 
