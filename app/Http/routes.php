@@ -24,3 +24,4 @@ Route::post('team/create', 'TeamController@store');
 Route::get('team/leave', 'TeamController@check');
 Route::get('team/destroy/{user_id}', 'TeamController@destroy');
 Route::get('team/delete', 'TeamController@delete');
+Route::get('team/invite/{user_id}', 'TeamController@invite');

@@ -116,11 +116,19 @@ class TeamController extends Controller
 
     public function delete()
     {
-        $user = User::findorfail(Auth::User()->id);
-        $team = teams::findorfail($user->team_id);
+        $users = User::all();
+        $team = teams::findorfail(Auth::User()->team_id);
+
+        foreach ($users as $user) {
+            if ($user->team_id == $team->id) {
+                $user->team_id = 0;
+                $user->save();
+            }
+        }
 
         $team->delete();
 
-        return redirect('team/destroy/' . $user->id);
+        return redirect('home');
+        
     }
 }

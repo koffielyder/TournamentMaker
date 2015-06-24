@@ -194,7 +194,7 @@
 
                                 <td><?php $summoners = Summoners::findOrFail($user->summoner_id); echo $summoners->lane; ?></td>
                                 @if (($captain == true) && ($user->id != Auth::User()->id) && ($user->team_id ==  0))
-                                    <td><button class="btn btn-default" type="button">Invite</button></td>
+                                    <td><a class="btn btn-default" type="button" href="{{ url('team/invite/' . $user->id) }}">Invite</a></td>
                                 @endif
                             </tr>
                         @endforeach
