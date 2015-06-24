@@ -1,0 +1,46 @@
+.everything {
+    background-color: #E6E6E6;
+}
+.navbar {
+    margin-bottom: 0px;
+}
+
+.navbar.navbar-default  {
+    margin-bottom: 0px;
+}
+.glyphicon-bell {
+    margin-right: 20px;
+}
+.notification   {
+    width: 300px;
+    height: 60px;
+}
+.summonerpic    {
+    width:40px;
+    padding-top: 4px;
+}
+.allpanels  {
+
+}
+.panel  {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.profilepic {
+    margin-top: 25px;
+}
+.profiel h1 {
+    margin-top: 35px;
+}
+
+.scoreheader    {
+    height: 55px;
+}
+.btn    {
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+.custom     {
+    margin-top: 35px;
+}
