@@ -53,8 +53,6 @@
                 </div>
 
 
-
-
                 <div class="panel panel-primary">
                     <!-- Default panel contents -->
 
