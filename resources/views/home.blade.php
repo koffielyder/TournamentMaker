@@ -27,7 +27,7 @@
                                 <h2>{{ $summoner->name }}</h2>
                             </div>
 
-                            <div class="col-sm-2 custom">
+                            <div class="col-sm-1 custom">
                             @if (Auth::user()->team_id > 0)
                                 <h4>Team:</h4>
 
