@@ -128,9 +128,14 @@ body {
 }
 
 
+
 /*Admin panel*/
 .container-admin{
     width:85%;
+}
+.container-admin li{
+    margin-left: 30px;
+    font-size: 17px;
 }
 .col-admin{
     padding-left: 3px;
