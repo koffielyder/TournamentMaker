@@ -77,7 +77,14 @@ class TeamController extends Controller
      */
     public function edit($team_id)
     {
-        var_dump($team_id);
+        $team = teams::findorfail($team_id);
+        $input = Request::all();
+
+        if (Auth::User()->id == $team->captain_id) {
+            $team->name = $input['name'];
+            $team->save();
+            return redirect('home');
+        }
     }
 
     /**
