@@ -38,8 +38,8 @@
 
             <div class="navbar-header">
                 <button class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"><span class=
-                "sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class=
-                "navbar-brand" href="#">Tournament Maker</a>
+                "sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+                <a class="navbar-brand" href="#">Tournament Maker</a>
             </div><!-- Collect the nav links, forms, and other content for toggling -->
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -102,7 +102,7 @@
 
     <div id="footer" class="footer">
       <div class="container">
-          <center><h4>Made with love by Nico and Thom. <a href="https://github.com/koffielyder/TournamentMaker">See this project on github.</a></h4></center>
+          <h4>Made with love by Nico and Thom. <a href="https://github.com/koffielyder/TournamentMaker">See this project on github.</a></h4>
       </div>
     </div>
 

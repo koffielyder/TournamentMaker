@@ -78,7 +78,7 @@
                             <div id="editteamalert" class="alert alert-info alert-block fade collapse">
                               <a href="#" type="button" class="close">&times;</a>
 
-                              
+
                               <div class="row">
 
                                   <form class="form-horizontal" role="form" method="POST" action="{{ url('/team/edit/' . $team->id) }}">

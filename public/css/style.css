@@ -63,10 +63,10 @@ body {
 /* Set the fixed height of the footer here */
 #push,
 #footer {
-  height: 40px;
+  height: 45px;
 }
 #footer {
-  background-color: #A0A0A0;
+  background-color: #C8C8C8;
 }
 .footer .h4{
     padding-top: 10px;
