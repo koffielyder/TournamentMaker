@@ -78,12 +78,18 @@
                             <div id="editteamalert" class="alert alert-info alert-block fade collapse">
                               <a href="#" type="button" class="close">&times;</a>
 
-                              <center>Edit your team '{{ $team->name }}'</center>
+                              
                               <div class="row">
 
                                   <form class="form-horizontal" role="form" method="POST" action="{{ url('/team/edit/' . $team->id) }}">
                                 <!--Nico zorg ff dat dit werkt en haal deze comment weg dan-->
                                   <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                  <div class="form-group">
+                                    <label class="control-label col-sm-4" for="name"></label>
+                                    <div class="col-sm-7">
+                                      Edit your team '{{ $team->name }}'
+                                    </div>
+                                  </div>
                                     <div class="form-group">
                                       <label class="control-label col-sm-4" for="name">Team name</label>
                                       <div class="col-sm-7">
