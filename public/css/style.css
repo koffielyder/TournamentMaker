@@ -17,7 +17,10 @@ body {
     margin-top: 0px;
     margin-bottom: 0px;
 }
-
+.btn-group{
+    margin-left: 20px;
+    margin-top: 10px;
+}
 .navbar.navbar-default  {
     margin-bottom: 0px;
 }

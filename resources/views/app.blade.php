@@ -50,7 +50,7 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="padding-top: 8px;">
                             <button class="btn btn-default notifications" type="button">
-                              Messages <span class="badge">2</span>
+                              Messages <span class="badge">1</span>
                             </button>
                         </a>
 
@@ -59,8 +59,13 @@
 
                                 <a href="#" class="innernot">
                                 <span class="glyphicon glyphicon-exclamation-sign"></span>
-                                 You've been kicked out of team Siren
+                                 You've been invited to team Siren
                                 </a>
+                                <div class="btn-group" role="group" aria-label="invite">
+                                  <button type="button" class="btn btn-default">Accept</button>
+                                  <button type="button" class="btn btn-default">View team</button>
+                                  <button type="button" class="btn btn-default">Decline</button>
+                                </div>
                             </li>
 
                             <li class="divider"></li>
