@@ -81,7 +81,7 @@
                               <center>Edit your team '{{ $team->name }}'</center>
                               <div class="row">
 
-                                  <form class="form-horizontal" role="form">
+                                  <form class="form-horizontal" role="form" method="POST" action="{{ url('/team/edit/' . $team->id) }}">
                                 <!--Nico zorg ff dat dit werkt en haal deze comment weg dan-->
                                   <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     <div class="form-group">
@@ -103,7 +103,7 @@
 
                                     <div class="form-group">
                                       <div class="col-sm-offset-4 col-sm-10">
-                                        <a type="submit" class="btn btn-default">Create</a>
+                                        <button type="submit" class="btn btn-default">Edit</button>
                                       </div>
                                     </div>
 

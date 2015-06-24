@@ -46,7 +46,7 @@ class TeamController extends Controller
         $input['captain_id'] = Auth::user()->id;
         var_dump($input);
         teams::create($input);
-        $team_id = teams::where('captain_id', '=', Auth::user()->id)->get();
+        $team_id = teams::where('captain_id', '=', Auth::user()->id)->where('active', '=', 1)->get();
         foreach ($team_id as $value) {
             $user['team_id'] = $value->id;
         }
@@ -75,9 +75,9 @@ class TeamController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function edit($id)
+    public function edit($team_id)
     {
-        //
+        var_dump($team_id);
     }
 
     /**

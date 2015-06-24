@@ -18,7 +18,7 @@ class Teams extends Migration
             $table->integer('captain_id');
             $table->rememberToken();
             $table->timestamps();
-            $table->boolean('active');
+            $table->boolean('active')->default(1);
         });
     }
 
