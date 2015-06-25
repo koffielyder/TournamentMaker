@@ -315,7 +315,7 @@
 
                                     <td><?php $captainname = User::findOrFail($teaminfo->captain_id) ?> {{ $captainname->name }}</td>
                                     @if (Auth::User()->team_id == 0)
-                                        <td><button class="btn btn-default homebtn" type="button">Join Team</button></td>
+                                        <td><a class="btn btn-default homebtn" href="{{ url('team/join/' . $teaminfo->id) }}">Join Team</a></td>
                                     @endif
                                 </tr>
                             @endif
