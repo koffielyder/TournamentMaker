@@ -73,7 +73,7 @@
                                             <div class="btn-group" role="group" aria-label="invite">
                                               <a type="button" class="btn btn-default" href="{{ url('team/addmember/' . $alert->user_id . '/' . $alert->team_id) }}">Accept</a>
                                               <a type="button" class="btn btn-default" href="#teams">View team</a>
-                                              <a type="button" class="btn btn-default">Decline</a>
+                                              <a type="button" class="btn btn-default" href="{{ url('team/delete-alert/' . $alert->id) }}">Decline</a>
                                             </div>
                                         </li>
                                         <li class="divider"></li>
