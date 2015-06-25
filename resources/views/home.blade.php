@@ -151,7 +151,7 @@
                                         <td><?php $summoners = Summoners::findOrFail($user->summoner_id); echo $summoners->name; ?></td>
                                         <td><?php $summoners = Summoners::findOrFail($user->summoner_id); echo $summoners->lane; ?></td>
                                         @if (($captain == true) && ($user->id != Auth::User()->id))
-                                            <td><a class="btn btn-default homebtn" type="button" href="{{ url('/team/destroy/' . $user->id) }}">Kick</a></td>
+                                            <td><a class="btn btn-default homebtn" href="{{ url('/team/destroy/' . $user->id) }}">Kick</a></td>
                                         @endif
                                     </tr>
                                 @endif
@@ -257,9 +257,9 @@
                                         @endif
                                     @endforeach
                                         @if ($work == true)
-                                            <td><a class="btn btn-default homebtn" type="button" href="{{ url('team/invite/' . $user->id) }}">Invite</a></td>
+                                            <td><a class="btn btn-default homebtn" href="{{ url('team/invite/' . $user->id) }}">Invite</a></td>
                                         @else
-                                            <td><a class="btn btn-default homebtn" type="button" href="{{ url('team/cancel-invite/' . $user->id) }}">Cancel invite</a></td>
+                                            <td><a class="btn btn-default homebtn" href="{{ url('team/cancel-invite/' . $user->id) }}">Cancel invite</a></td>
                                         @endif
                                 @endif
                             </tr>
