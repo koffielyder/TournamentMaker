@@ -257,9 +257,9 @@
                                         @endif
                                     @endforeach
                                         @if ($work == true)
-                                            <td><a class="btn btn-default" type="button" href="{{ url('team/invite/' . $user->id) }}">Invite</a></td>
-                                        @else 
-                                            <td><a class="btn btn-default" type="button" href="{{ url('team/cancel-invite/' . $user->id) }}">Cancel invite</a></td>
+                                            <td><a class="btn btn-default homebtn" type="button" href="{{ url('team/invite/' . $user->id) }}">Invite</a></td>
+                                        @else
+                                            <td><a class="btn btn-default homebtn" type="button" href="{{ url('team/cancel-invite/' . $user->id) }}">Cancel invite</a></td>
                                         @endif
                                 @endif
                             </tr>
@@ -309,7 +309,7 @@
 
                                 <td><?php $captainname = User::findOrFail($teaminfo->captain_id) ?> {{ $captainname->name }}</td>
                                 @if (Auth::User()->team_id == 0)
-                                    <td><button class="btn btn-default" type="button">Join Team</button></td>
+                                    <td><button class="btn btn-default homebtn" type="button">Join Team</button></td>
                                 @endif
                             </tr>
                         @endforeach
