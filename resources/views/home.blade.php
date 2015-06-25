@@ -151,7 +151,11 @@
                                         <td><?php $summoners = Summoners::findOrFail($user->summoner_id); echo $summoners->name; ?></td>
                                         <td><?php $summoners = Summoners::findOrFail($user->summoner_id); echo $summoners->lane; ?></td>
                                         @if (($captain == true) && ($user->id != Auth::User()->id))
+<<<<<<< HEAD
                                             <td><a class="btn btn-default homebtn" href="{{ url('/team/destroy/' . $user->id) }}">Kick</a></td>
+=======
+                                            <td><a class="btn btn-default" type="button" href="{{ url('/team/destroy/' . $user->id) }}">Kick</a></td>
+>>>>>>> 5ed4f689a4f6549f1a7f8243a2e9625f09f03d1d
                                         @endif
                                     </tr>
                                 @endif
@@ -298,20 +302,23 @@
                         </thead>
 
                         <tbody>
-                        <?php $teams = teams::all(); $count = 0; ?>
+                        <?php $teams = teams::all(); ?>
                         @foreach ($teams as $teaminfo)
-                            <tr>
-                                <td class="capitalize">{{ $teaminfo->name }}</td>
+                            @if ($teaminfo->active == 1)
+                                <?php $count = 0; ?>
+                                <tr>
+                                    <td class="capitalize">{{ $teaminfo->name }}</td>
 
-                                <td>@foreach ($users as $user) @if ($user->team_id == $teaminfo->id) <?php $count++; ?> @endif @endforeach {{$count}}</td>
+                                    <td>@foreach ($users as $user) @if ($user->team_id == $teaminfo->id) <?php $count++; ?> @endif @endforeach {{$count}}</td>
 
-                                <td><?php $user = User::where('team_id', '=', $teaminfo->id)->get() ?> @foreach ($user as $username) {{ $username->name }} @endforeach</td>
+                                    <td><?php $user = User::where('team_id', '=', $teaminfo->id)->get() ?> @foreach ($user as $username) {{ $username->name }} @endforeach</td>
 
-                                <td><?php $captainname = User::findOrFail($teaminfo->captain_id) ?> {{ $captainname->name }}</td>
-                                @if (Auth::User()->team_id == 0)
-                                    <td><button class="btn btn-default homebtn" type="button">Join Team</button></td>
-                                @endif
-                            </tr>
+                                    <td><?php $captainname = User::findOrFail($teaminfo->captain_id) ?> {{ $captainname->name }}</td>
+                                    @if (Auth::User()->team_id == 0)
+                                        <td><button class="btn btn-default homebtn" type="button">Join Team</button></td>
+                                    @endif
+                                </tr>
+                            @endif
                         @endforeach
                         </tbody>
                     </table>
