@@ -83,9 +83,9 @@
         								</tbody>
         							</table>
         						</div>
-        					</div>
-        				</div>
-        			</div>
+        					</div><!-- /.panel-body -->
+        				</div><!-- /.panel .panel-primary -->
+        			</div><!-- /.col-md-7 .col-admin -->
 
 
         			<div class="col-md-5 col-admin">
@@ -206,10 +206,10 @@
         									</tr>
         								</tbody>
         							</table>
-        						</div>
-        					</div>
-        				</div>
-        			</div>
+        						</div><!-- /.row -->
+        					</div><!-- /.panel-body -->
+        				</div><!-- /.panel .panel-primary -->
+        			</div><!-- /.col-md-12 .col-admin -->
                 </div><!-- /.row -->
             </div><!-- / players tab -->
 
@@ -268,8 +268,8 @@
         									</tr>
         								</tbody>
         							</table>
-        						</div>
-        					</div>
+        						</div><!-- /.row -->
+        					</div><!-- /.panel-body -->
         				</div><!--./panel-->
         			</div><!-- last 10 teams-->
 				</div>
