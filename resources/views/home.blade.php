@@ -151,7 +151,7 @@
                                         <td><?php $summoners = Summoners::findOrFail($user->summoner_id); echo $summoners->name; ?></td>
                                         <td><?php $summoners = Summoners::findOrFail($user->summoner_id); echo $summoners->lane; ?></td>
                                         @if (($captain == true) && ($user->id != Auth::User()->id))
-                                            <td><a class="btn btn-default" type="button" href="{{ url('/team/destroy/' . $user->id) }}">Kick</a></td>
+                                            <td><a class="btn btn-default homebtn" type="button" href="{{ url('/team/destroy/' . $user->id) }}">Kick</a></td>
                                         @endif
                                     </tr>
                                 @endif
