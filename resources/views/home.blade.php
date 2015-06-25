@@ -250,7 +250,17 @@
 
                                 <td><?php $summoners = Summoners::findOrFail($user->summoner_id); echo $summoners->lane; ?></td>
                                 @if (($captain == true) && ($user->id != Auth::User()->id) && ($user->team_id ==  0))
-                                    <td><a class="btn btn-default" type="button" href="{{ url('team/invite/' . $user->id) }}">Invite</a></td>
+                                    <?php $work = true; ?>
+                                    @foreach ($alerts as $alert)
+                                        @if (($alert->user_id == $user->id) && ($alert->team_id == Auth::User()->team_id))
+                                            <?php $work = false; ?>
+                                        @endif
+                                    @endforeach
+                                        @if ($work == true)
+                                            <td><a class="btn btn-default" type="button" href="{{ url('team/invite/' . $user->id) }}">Invite</a></td>
+                                        @else 
+                                            <td><a class="btn btn-default" type="button" href="{{ url('team/invite/' . $user->id) }}">Cancel invite</a></td>
+                                        @endif
                                 @endif
                             </tr>
                         @endforeach
