@@ -182,4 +182,15 @@ class TeamController extends Controller
 
         return redirect('home');
     }
+
+    public function deleteAlertByUserId($user_id)
+    {
+        $alert = user_alert::where('user_id', '=', $user_id)->where('team_id', '=', Auth::User()->team_id)->first();
+        $team = teams::findorfail(Auth::User()->team_id);
+        if ($team->captain_id == Auth::User()->id) {
+            $alert->delete();
+        }
+
+        return redirect('home');
+    }
 }

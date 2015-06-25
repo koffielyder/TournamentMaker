@@ -28,5 +28,7 @@ Route::get('team/invite/{user_id}', 'TeamController@invite');
 Route::post('team/edit/{team_id}', 'TeamController@edit');
 Route::get('team/addmember/{user_id}/{team_id}', 'TeamController@update');
 Route::get('team/delete-alert/{id}', 'TeamController@deleteAlert');
+Route::get('team/cancel-invite/{user_id}', 'TeamController@deleteAlertByUserId');
+
 
 Route::get('admin', 'AdminController@index');
