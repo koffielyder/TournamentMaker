@@ -144,7 +144,7 @@ class TeamController extends Controller
                 $user->save();
 
                 $input['user_id'] = $user->id;
-                $input['alert_id'] = 5;
+                $input['alert_id'] = 3;
                 $input['team_id'] = $team->id;
 
                 user_alert::create($input);
@@ -192,5 +192,22 @@ class TeamController extends Controller
         }
 
         return redirect('home');
+    }
+
+    public function joinTeam($team_id)
+    {
+        $alert = user_alert::where('user_id', '=', Auth::User()->id)->where('team_id', '=', $team_id)->first();
+            if ($alert) {
+                echo "bestaat al";
+            }
+            else    {
+                echo "deze is nieuw";
+                $input['user_id'] = Auth::User()->id;
+                $input['team_id'] = $team_id;
+                $input['alert_id'] = 2;
+                $input['by_user'] = 1;
+
+                user_alert::create($input);
+            }
     }
 }
