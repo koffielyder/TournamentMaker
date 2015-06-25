@@ -303,7 +303,6 @@
                                 @endif
                             </tr>
                         @endforeach
-                            </tr>
                         </tbody>
                     </table>
                 </div>

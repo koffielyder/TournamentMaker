@@ -17,6 +17,7 @@ class UserAlerts extends Migration
             $table->integer('alert_id');
             $table->integer('user_id');
             $table->integer('team_id');
+            $table->boolean('by_user');
             $table->timestamps();
         });
     }

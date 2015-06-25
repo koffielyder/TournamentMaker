@@ -27,6 +27,6 @@ class PlayerRole extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('player_role');
     }
 }
