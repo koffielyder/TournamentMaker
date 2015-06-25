@@ -259,7 +259,7 @@
                                         @if ($work == true)
                                             <td><a class="btn btn-default" type="button" href="{{ url('team/invite/' . $user->id) }}">Invite</a></td>
                                         @else 
-                                            <td><a class="btn btn-default" type="button" href="{{ url('team/invite/' . $user->id) }}">Cancel invite</a></td>
+                                            <td><a class="btn btn-default" type="button" href="{{ url('team/cancel-invite/' . $user->id) }}">Cancel invite</a></td>
                                         @endif
                                 @endif
                             </tr>
