@@ -16,7 +16,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Tournament Maker</title>
+
+    <meta name="description" content="Tournament Maker is a website that helps you host tournaments, find teams or teammates, and many more!">
+    <meta name="keywords" content="league of legends, tournament, hosting, betting, players, team, teams, teamplayers, teammates, lol, thom kaptein, nico shultz, league, faceit, battle, battles">
+    <meta name="language" content="english">  
+
+	<title>Tournament Maker Alpha</title>
 
 
 
@@ -45,15 +50,11 @@
             <div class="navbar-header">
                 <button class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"><span class=
                 "sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
-                <a class="navbar-brand" href="#">Tournament Maker</a>
+                <a class="navbar-brand" href="#">Tournament Maker™ Alpha</a>
             </div><!-- Collect the nav links, forms, and other content for toggling -->
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#"></a>
-                    </li>
-
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="padding-top: 8px;">
                             <button class="btn btn-default notifications" type="button">
@@ -112,13 +113,13 @@
 
 	@yield('content')
 
-	<!-- Scripts -->
 
     <div class="navbar navbar-bottom"><center>
-        <p class="text-muted credit">Made with love by Nico and Thom. This site is in alpha. Copyright 2015.    <iframe src="https://ghbtns.com/github-btn.html?user=koffielyder&repo=TournamentMaker&type=star&count=true" frameborder="0" scrolling="0" width="160px" height="22px" class="gitwidget"></iframe></p>
+        <p class="text-muted credit">Made by Nico and Thom. © 2015. Check us on github:</p>
+        <iframe src="https://ghbtns.com/github-btn.html?user=koffielyder&repo=tournamentmaker&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe></iframe>
     </center></div>
 
-
+    <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>

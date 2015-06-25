@@ -8,7 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Tournament Maker</title>
+	<title>Tournament Maker Alpha</title>
 
 
 
@@ -37,18 +37,11 @@
             <div class="navbar-header">
                 <button class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"><span class=
                 "sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
-                <a class="navbar-brand" href="#">Tournament Maker</a>
+                <a class="navbar-brand" href="#">Tournament Maker™ Alpha</a>
             </div><!-- Collect the nav links, forms, and other content for toggling -->
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#"></a>
-                    </li>
-
-
-                  
-
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ Auth::User()->name }} <span class="caret"></span></a>
 
@@ -77,11 +70,10 @@
 
 	<!-- Scripts -->
 
-    <div id="footer" class="footer">
-      <div class="container">
-        <p class="text-muted credit">Made with love by Nico and Thom. This site is in alpha. Copyright 2015.    <iframe src="https://ghbtns.com/github-btn.html?user=koffielyder&repo=TournamentMaker&type=star&count=true" frameborder="0" scrolling="0" width="160px" height="22px" class="gitwidget"></iframe></p>
-      </div>
-    </div>
+    <div class="navbar navbar-bottom"><center>
+        <p class="text-muted credit">Made by Nico and Thom. © 2015. Check us on github:</p>
+        <iframe src="https://ghbtns.com/github-btn.html?user=koffielyder&repo=tournamentmaker&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe></iframe>
+    </center></div>
 
 
 </body>

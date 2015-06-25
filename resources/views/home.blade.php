@@ -192,7 +192,7 @@
                                       </fieldset>
 
                                       <div class="form-group">
-                                        <div class="col-sm-offset-4 col-sm-10">
+                                        <div class="col-sm-offset-4 col-sm-7">
                                           <button type="submit" class="btn btn-default">Create</button>
                                         </div>
                                       </div>

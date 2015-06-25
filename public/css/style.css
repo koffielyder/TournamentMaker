@@ -92,11 +92,14 @@ body {
 /*Footer*/
 .navbar-bottom{
     background-color: #C8C8C8;
+    box-shadow: -2px -2px 1px grey;
+    height: 100px;
 }
-
 .credit {
   margin: 15px 0;
+  margin-bottom: 10px;
 }
+
 
 
 /*Remove background for messages button*/
