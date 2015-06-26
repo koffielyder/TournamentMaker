@@ -19,10 +19,9 @@
 
     <meta name="description" content="Tournament Maker is a website that helps you host tournaments, find teams or teammates, and many more!">
     <meta name="keywords" content="league of legends, tournament, hosting, betting, players, team, teams, teamplayers, teammates, lol, thom kaptein, nico shultz, league, faceit, battle, battles">
-    <meta name="language" content="english">  
+    <meta name="language" content="english">
 
 	<title>Tournament Maker Alpha</title>
-
 
 
 	<!-- Latest compiled and minified CSS -->
