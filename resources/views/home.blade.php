@@ -8,6 +8,8 @@
 
 @section('content')
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
     <div class="everything">
         <div class="container allpanels">
 
@@ -63,7 +65,7 @@
                         @if (Auth::user()->team_id > 0)
                             @if ($team->captain_id == Auth::user()->id)
                                 <a class="btn btn-default pull-right" type="button" href="{{ url('/team/delete') }}">Delete team</a>
-                                <a id="editteam" class="btn btn-default pull-right"  type="button">Edit team</a>
+                                <a id="editteam" class="btn btn-default pull-right">Edit team</a>
                             @else
                                 <a class="btn btn-default pull-right" type="button" href="team/leave">Leave team</a>
                             @endif
@@ -81,39 +83,39 @@
                               <a type="button" class="close">&times;</a>
 
 
-                              <div class="row">
+                                <div class="row">
 
-                                  <form class="form-horizontal" role="form" method="POST" action="{{ url('/team/edit/' . $team->id) }}">
-                                  <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                  <div class="form-group">
-                                    <label class="control-label col-sm-4" for="name"></label>
-                                    <div class="col-sm-7">
-                                      Edit your team '{{ $team->name }}'
-                                    </div>
-                                  </div>
-                                    <div class="form-group">
-                                      <label class="control-label col-sm-4" for="name">Team name</label>
-                                      <div class="col-sm-7">
-                                        <input type="teamname" class="form-control" name="name" placeholder="Enter new team name" required>
+                                      <form class="form-horizontal" role="form" method="POST" action="{{ url('/team/edit/' . $team->id) }}">
+                                      <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                      <div class="form-group">
+                                        <label class="control-label col-sm-4" for="name"></label>
+                                        <div class="col-sm-7">
+                                          Edit your team '{{ $team->name }}'
+                                        </div>
                                       </div>
-                                    </div>
-                                    <fieldset disabled>
                                         <div class="form-group">
-                                          <label class="control-label col-sm-4" for="amount">5v5 or 3v3 (3v3 support soon™)</label>
+                                          <label class="control-label col-sm-4" for="name">Team name</label>
                                           <div class="col-sm-7">
-                                              <select id="amount" class="form-control">
-                                                  <option>5v5</option>
-                                              </select>
+                                            <input type="teamname" class="form-control" name="name" placeholder="Enter new team name" required>
                                           </div>
                                         </div>
-                                    </fieldset>
+                                        <fieldset disabled>
+                                            <div class="form-group">
+                                              <label class="control-label col-sm-4" for="amount">5v5 or 3v3 (3v3 support soon™)</label>
+                                              <div class="col-sm-7">
+                                                  <select id="amount" class="form-control">
+                                                      <option>5v5</option>
+                                                  </select>
+                                              </div>
+                                            </div>
+                                        </fieldset>
 
-                                    <div class="form-group">
-                                      <div class="col-sm-offset-4 col-sm-10">
-                                        <button type="submit" class="btn btn-default">Edit</button>
-                                      </div>
-                                    </div>
-
+                                        <div class="form-group">
+                                          <div class="col-sm-offset-4 col-sm-10">
+                                            <button type="submit" class="btn btn-default">Edit</button>
+                                          </div>
+                                        </div>
+                                    </form>
                                 </div>
 
                             </div>
@@ -151,11 +153,7 @@
                                         <td><?php $summoners = Summoners::findOrFail($user->summoner_id); echo $summoners->name; ?></td>
                                         <td><?php $summoners = Summoners::findOrFail($user->summoner_id); echo $summoners->lane; ?></td>
                                         @if (($captain == true) && ($user->id != Auth::User()->id))
-<<<<<<< HEAD
                                             <td><a class="btn btn-default homebtn" href="{{ url('/team/destroy/' . $user->id) }}">Kick</a></td>
-=======
-                                            <td><a class="btn btn-default" type="button" href="{{ url('/team/destroy/' . $user->id) }}">Kick</a></td>
->>>>>>> 5ed4f689a4f6549f1a7f8243a2e9625f09f03d1d
                                         @endif
                                     </tr>
                                 @endif
