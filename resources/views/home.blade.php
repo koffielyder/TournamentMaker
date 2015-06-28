@@ -215,7 +215,7 @@
                         Players
                     </div>
 
-                    <div class="panel-body">
+                    <div class="panel-body" id="users">
                         <p>These are all the players that are registered</p>
                     </div><!-- Table -->
 
