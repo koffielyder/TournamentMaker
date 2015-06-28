@@ -6258,3 +6258,9 @@ label,
 .paddings  {
   padding: 5px;
 }
+.divider{
+    padding-top: 1px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}

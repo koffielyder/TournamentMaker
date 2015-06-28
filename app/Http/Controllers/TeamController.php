@@ -44,8 +44,8 @@ class TeamController extends Controller
         $input = Request::all();
 
         $input['captain_id'] = Auth::user()->id;
-        var_dump($input);
         teams::create($input);
+
         $team_id = teams::where('captain_id', '=', Auth::user()->id)->where('active', '=', 1)->get();
         foreach ($team_id as $value) {
             $user['team_id'] = $value->id;
@@ -79,10 +79,24 @@ class TeamController extends Controller
     {
         $team = teams::findorfail($team_id);
         $input = Request::all();
+        $users = User::all();
 
         if (Auth::User()->id == $team->captain_id) {
             $team->name = $input['name'];
             $team->save();
+
+            $alert['alert_id'] = 5;
+            $alert['team_id'] = $team->id;
+
+            foreach ($users as $user) {
+                if ($user->team_id == $team->id) {
+                    $alert['user_id'] = $user->id;
+                    user_alert::create($alert);
+                }
+            }
+
+            
+
             return redirect('home');
         }
     }

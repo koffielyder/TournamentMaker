@@ -6,11 +6,7 @@
     use App\teams;
     $count = 0;
 
-    foreach ($alerts as $alert) {
-        if ($alert->user_id == Auth::User()->id) {
-            $count++;
-        }
-    }
+    include '..\App\alertsCount.php';
 ?>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -60,27 +56,9 @@
                               Messages <span class="badge">{{ $count }}</span>
                             </button>
                         </a>
-                        @if ($count != 0)
-                            <ul class="dropdown-menu">
-                                @foreach ($alerts as $alert)
-                                    @if ($alert->user_id == Auth::User()->id)
-                                        <?php $teaminfo = teams::findOrFail($alert->team_id); ?>
-                                        <li class="notification">
-                                            <a href="#" class="innernot">
-                                            <span class="glyphicon glyphicon-exclamation-sign"></span>
-                                             You've been invited to a team "{{ $teaminfo->name }}"
-                                            </a>
-                                            <div class="btn-group" role="group" aria-label="invite">
-                                              <a type="button" class="btn btn-default" href="{{ url('team/addmember/' . $alert->user_id . '/' . $alert->team_id) }}">Accept</a>
-                                              <a type="button" class="btn btn-default" href="#teams">View team</a>
-                                              <a type="button" class="btn btn-default" href="{{ url('team/delete-alert/' . $alert->id) }}">Decline</a>
-                                            </div>
-                                        </li>
-                                        <li class="divider"></li>
-                                    @endif
-                                @endforeach
-                            </ul>
-                        @endif
+                        
+
+                        <?php include '..\App\alerts.php'; ?>
 
 
                     </li>
@@ -122,6 +100,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    
 
 </body>
 </html>

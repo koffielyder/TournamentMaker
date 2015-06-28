@@ -19,7 +19,7 @@ body {
 
 .divider{
     padding-top: 1px;
-    padding-bottom: 1px;
+    padding-bottom: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
 }
@@ -150,4 +150,27 @@ body {
 .adminoptions{
     width: 440px;
     padding-top: 1px;
+}
+
+.dropdown-menu  {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.divider    {
+    padding-top: 1px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin: 0;
+}
+
+.dropdown-menu .divider     {
+    padding-top: 1px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin: 0;
 }
