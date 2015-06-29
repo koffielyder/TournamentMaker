@@ -5,7 +5,7 @@
 @extends('admin.nav')
 @section('content')
 
-<div class="everything">
+<div class="everything wrapper">
 	<div class="container allpanels container-admin">
 
 
@@ -313,5 +313,6 @@
 
     </div><!-- /.container -->
 </div><!-- /.everything -->
+<div class="push"></div>
 
 @endsection

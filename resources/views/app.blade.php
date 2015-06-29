@@ -56,7 +56,7 @@
                               Messages <span class="badge">{{ $count }}</span>
                             </button>
                         </a>
-                        
+
 
                         <?php include '..\App\alerts.php'; ?>
 
@@ -89,9 +89,9 @@
 
 
 	@yield('content')
+    <div class="push"></div>
 
-
-    <div class="navbar navbar-bottom"><center>
+    <div class="navbar navbar-bottom footer"><center>
         <p class="text-muted credit">Made by Nico and Thom. © 2015. Check us on github:</p>
         <iframe src="https://ghbtns.com/github-btn.html?user=koffielyder&repo=tournamentmaker&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe></iframe>
     </center></div>
@@ -100,7 +100,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    
+
 
 </body>
 </html>

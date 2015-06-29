@@ -3,6 +3,9 @@ body {
   height: 100%;
   background-color: #E6E6E6;
 }
+* {
+	margin: 0;
+}
 
 .everything {
     background-color: #E6E6E6;
@@ -90,6 +93,18 @@ body {
 
 
 /*Footer*/
+
+html, body {
+	height: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+}
+footer, .push {
+	height: 155px; /* '.push' must be the same height as 'footer' */
+}
+
 .navbar-bottom{
     background-color: #C8C8C8;
     box-shadow: -2px -2px 1px grey;
