@@ -89,7 +89,7 @@
 
 
 	@yield('content')
-    <div class="push"></div>
+    
 
     <div class="navbar navbar-bottom footer"><center>
         <p class="text-muted credit">Made by Nico and Thom. © 2015. Check us on github:</p>
