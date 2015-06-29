@@ -1,3 +1,7 @@
+<?php
+    use App\Summoners;
+?>
+
 @extends('admin.nav')
 @section('content')
 
@@ -51,7 +55,7 @@
         									<tr>
         										<th>Name</th>
 
-        										<th>Summname</th>
+        										<th>Summonername</th>
 
         										<th>Team</th>
 
@@ -63,6 +67,29 @@
 
 
         								<tbody>
+
+                                            @foreach ($users as $user)
+                                                <tr>
+                                                    <td>{{ $user->name }}</td>
+
+                                                    <td><?php if ($user->summoner_id != 0) { $summoner = Summoners::findorfail($user->summoner_id); echo $summoner->name; } else {echo "none";}?></td>
+
+                                                    <td><?php if ($user->team_id != 0) { $team = teams::findorfail($user->team_id); echo $team->name; } else {echo "none";}?></td>
+
+                                                    <td>{{ $user->email }}</td>
+
+                                                    <td class="adminoptions">
+                                                        <a class="btn btn-default adminbutton" href="" type="button">Info (edit)</a>
+                                                        <a class="btn btn-default adminbutton" href="" type="button">Ban</a>
+                                                        <a class="btn btn-default adminbutton" href="" type="button">Remove</a>
+                                                        <a class="btn btn-default adminbutton" href="" type="button">Kick from team</a>
+                                                        <a class="btn btn-default adminbutton" href="" type="button">Reset password</a>
+                                                    </td>
+
+                                                </tr>
+                                            @endforeach
+
+
         									<tr>
         										<td>Thom</td>
 
