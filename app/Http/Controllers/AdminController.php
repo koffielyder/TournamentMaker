@@ -21,24 +21,10 @@ class AdminController extends Controller
      */
     public function index()
     {
-        if (Auth::user()->summoner_id == 0) {
-            return view('auth.connect');
-        }
-
-        $data['captain'] = false;
-
-        $data['summoner'] = Summoners::findOrFail(Auth::User()->summoner_id);
-        if (Auth::User()->team_id)  {
-            $data['team'] = teams::findOrFail(Auth::User()->team_id);
-            if ($data['team']->captain_id == Auth::User()->id) {
-                $data['captain'] = true;
-            }
-        }
 
         $data['users'] = User::all();
 
-        $data['alerts'] = user_alert::all();
-        return view('admin.admin');
+        return view('admin.admin', $data);
     }
 
     /**
