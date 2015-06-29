@@ -1,6 +1,7 @@
 <?php
 use App\User;
 use App\teams;
+use App\deleted_teams;
 if ($count != 0): ?>
 	<ul class="dropdown-menu">
 		<?php foreach ($alerts as $alert): ?>
@@ -35,7 +36,7 @@ if ($count != 0): ?>
 	            <li class="divider"></li>
 
 			<?php elseif (($alert->alert_id == 3) && ($alert->user_id == Auth::User()->id)): ?>
-				<?php $teaminfo = teams::findOrFail($alert->team_id); ?>
+				<?php $teaminfo = deleted_teams::findOrFail($alert->team_id); ?>
 				<li class="notification">
 	                <a href="#" class="innernot">
 	                <span class="glyphicon glyphicon-exclamation-sign"></span>

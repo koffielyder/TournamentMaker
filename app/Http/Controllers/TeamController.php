@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\teams;
 use App\User;
 use App\user_alert;
+use App\deleted_teams;
 use Auth;
 use Request;
 
@@ -46,7 +47,7 @@ class TeamController extends Controller
         $input['captain_id'] = Auth::user()->id;
         teams::create($input);
 
-        $team_id = teams::where('captain_id', '=', Auth::user()->id)->where('active', '=', 1)->get();
+        $team_id = teams::where('captain_id', '=', Auth::user()->id)->get();
         foreach ($team_id as $value) {
             $user['team_id'] = $value->id;
         }
@@ -154,19 +155,23 @@ class TeamController extends Controller
 
         foreach ($users as $user) {
             if ($user->team_id == $team->id) {
-                $user->team_id = 0;
-                $user->save();
+                    $user->team_id = 0;
+                    $user->save();
 
-                $input['user_id'] = $user->id;
-                $input['alert_id'] = 3;
-                $input['team_id'] = $team->id;
+                    $input['user_id'] = $user->id;
+                    $input['alert_id'] = 3;
+                    $input['team_id'] = $team->id;
 
-                user_alert::create($input);
+                    user_alert::create($input);
             }
         }
 
-        $team->active = false;
-        $team->save();
+        $team_input['id'] = $team->id;
+        $team_input['captain_id'] = $team->captain_id;
+        $team_input['name'] = $team->name;
+
+        deleted_teams::create($team_input);
+        $team->delete();
 
         return redirect('home');
         
@@ -189,10 +194,7 @@ class TeamController extends Controller
     public function deleteAlert($id)
     {
         $alert = user_alert::findorfail($id);
-        $team = teams::findorfail($alert->team_id);
-        if (($alert->user_id == Auth::User()->id) || (($alert->team_id == Auth::User()->team_id) && ($team->captain_id == Auth::User()->id))) {
-            $alert->delete();
-        }
+        $alert->delete();
 
         return redirect('home');
     }
