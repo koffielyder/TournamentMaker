@@ -71,7 +71,7 @@
                             </fieldset>
                             <div class="form-group">
                               <div class="col-sm-offset-4">
-                                <button type="submit" class="btn btn-default">Submit</button><a type="submit" class="btn btn-default" href="{{ url('/admin') }}">Skip and become admin (password protected!)</a>
+                                <button type="submit" class="btn btn-default">Submit</button><a class="btn btn-default" href="{{ url('/admin') }}">Skip and become admin (password protected!)</a><a class="btn btn-default" href="{{ url('/auth/logout') }}">Log Out</a>
                               </div>
                             </div>
 
