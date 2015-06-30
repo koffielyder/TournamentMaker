@@ -1,5 +1,16 @@
-<div class="container">
-	<div class="row">
+<head>
+<style>
+html,
+body {
+  height: 100%;
+  background-color: #E6E6E6;
+}
+</style>
+</head>
+<!-- The above is temporary, we should fix this instead of being lazy -->
+
+<div class="everything">
+	<div class="container allpanels row">
 		<div class="col-md-10 col-md-offset-1">
 
 			<div class="panel panel-default">
@@ -35,11 +46,10 @@
 							</div>
 						</div>
 					</form>
-						
+
 				</div>
 
 			</div>
 		</div>
 	</div>
 </div>
-
