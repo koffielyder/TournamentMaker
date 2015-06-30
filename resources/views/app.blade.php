@@ -6,7 +6,7 @@
     use App\teams;
     $count = 0;
 
-    include '..\App\alertsCount.php';
+    use App\alertsCount;
 ?>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -58,7 +58,7 @@
                         </a>
 
 
-                        <?php include '..\App\alerts.php'; ?>
+                        <?php use App\alerts; ?>
 
 
                     </li>
