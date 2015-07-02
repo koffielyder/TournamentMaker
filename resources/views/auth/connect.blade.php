@@ -1,7 +1,6 @@
 <html>
-
 <head>
-    <title>School 3v3 Tournament alpha</title>
+    <title>Add a summoner name | Tournament Hosting Alpha</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

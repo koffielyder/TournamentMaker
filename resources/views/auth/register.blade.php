@@ -1,6 +1,9 @@
 <html>
 
-<?php include("parts/head.php"); ?>
+<?php
+$pageTitle = "Register an account | Tournament Hosting Alpha";
+include("parts/head.php");
+?>
 
 <body>
     <div class="everything">
@@ -48,34 +51,13 @@
                             <div class="col-sm-7">
                               <input type="password" class="form-control" name="password_confirmation" placeholder="Enter password">
                             </div>
-                          </div>
-                          <!--
-                          <div class="form-group">
-                            <label class="control-label col-sm-4" for="pwd">Summoner name</label>
-                            <div class="col-sm-7">
-                              <input type="text" class="form-control" id="summname" placeholder="Enter summoner name">
-                            </div>
-                          </div>
-
-                          <fieldset disabled>
-                              <div class="form-group">
-                                <label class="control-label col-sm-4" for="server">Server: (Notice: Only EUW supported at this time)</label>
-                                <div class="col-sm-7">
-                                    <select id="server" class="form-control">
-                                        <option>EUW</option>
-                                    </select>
-                                </div>
-                              </div>
-                          </fieldset>
-                          -->
-
-
-                          <div class="form-group">
+                        </div>
+                        <div class="form-group">
                             <div class="col-sm-offset-4 col-sm-10">
                               <button type="submit" class="btn btn-default">Continue</button>
                             </div>
-                          </div>
-                      </form>
+                        </div>
+                     </form>
                   </div>
               </div>
 

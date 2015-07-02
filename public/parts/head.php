@@ -1,5 +1,12 @@
 <head>
-    <title>School 3v3 Tournament alpha</title>
+    <title>
+    <?php
+    if ($pageTitle)
+    {echo $pageTitle;}
+    else
+    {echo"Tournament Hosting Alpha";}
+    ?>
+    </title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

@@ -1,6 +1,9 @@
 <html>
 
-<?php include("parts/head.php"); ?>
+<?php
+$pageTitle = "Login | Tournament Hosting Alpha";
+include("parts/head.php");
+?>
 
 <body>
     <div class="everything">
