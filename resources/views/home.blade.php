@@ -2,6 +2,12 @@
     use App\Summoners;
     use App\teams;
     use App\User;
+
+    $summoner = Summoners::all();
+
+    foreach ($summoner as $value) {
+        var_dump($value);
+    }
 ?>
 
 @extends('app')
