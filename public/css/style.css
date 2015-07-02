@@ -116,6 +116,15 @@ footer, .push {
 }
 
 
+/*Register and connect page*/
+.becomeadmin{
+    margin-right: 115px;
+}
+.alert-danger{
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
 
 /*Remove background for messages button*/
 .navbar-default .navbar-nav > .open > a,
