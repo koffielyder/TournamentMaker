@@ -234,37 +234,39 @@
                         </thead>
                         <tbody>
                         @foreach ($users as $user)
-                            <tr>
-                                <td class="capitalize">{{ $user->name }}</td>
+                            @if ($user->summoner_id != 0)
+                                <tr>
+                                    <td class="capitalize">{{ $user->name }}</td>
 
-                                <td><?php $summoners = Summoners::findOrFail($user->summoner_id); echo $summoners->name; ?></td>
+                                    <td><?php $summoners = Summoners::findOrFail($user->summoner_id); echo $summoners->name; ?></td>
 
-                                <td class="capitalize"><?php
-                                        if ($user->team_id > 0) {
-                                            $team = Teams::findOrFail($user->team_id);
-                                            echo $team->name;
-                                        }
-                                        else {
-                                            echo "No team";
-                                        }
+                                    <td class="capitalize"><?php
+                                            if ($user->team_id > 0) {
+                                                $team = Teams::findOrFail($user->team_id);
+                                                echo $team->name;
+                                            }
+                                            else {
+                                                echo "No team";
+                                            }
 
-                                ?></td>
+                                    ?></td>
 
-                                <td><?php $summoners = Summoners::findOrFail($user->summoner_id); echo $summoners->lane; ?></td>
-                                @if (($captain == true) && ($user->id != Auth::User()->id) && ($user->team_id ==  0))
-                                    <?php $work = true; ?>
-                                    @foreach ($alerts as $alert)
-                                        @if (($alert->user_id == $user->id) && ($alert->team_id == Auth::User()->team_id))
-                                            <?php $work = false; ?>
-                                        @endif
-                                    @endforeach
-                                        @if ($work == true)
-                                            <td><a class="btn btn-default homebtn" href="{{ url('team/invite/' . $user->id) }}">Invite</a></td>
-                                        @else
-                                            <td><a class="btn btn-default homebtn" href="{{ url('team/cancel-invite/' . $user->id) }}">Cancel invite</a></td>
-                                        @endif
-                                @endif
-                            </tr>
+                                    <td><?php $summoners = Summoners::findOrFail($user->summoner_id); echo $summoners->lane; ?></td>
+                                    @if (($captain == true) && ($user->id != Auth::User()->id) && ($user->team_id ==  0))
+                                        <?php $work = true; ?>
+                                        @foreach ($alerts as $alert)
+                                            @if (($alert->user_id == $user->id) && ($alert->team_id == Auth::User()->team_id))
+                                                <?php $work = false; ?>
+                                            @endif
+                                        @endforeach
+                                            @if ($work == true)
+                                                <td><a class="btn btn-default homebtn" href="{{ url('team/invite/' . $user->id) }}">Invite</a></td>
+                                            @else
+                                                <td><a class="btn btn-default homebtn" href="{{ url('team/cancel-invite/' . $user->id) }}">Cancel invite</a></td>
+                                            @endif
+                                    @endif
+                                </tr>
+                            @endif
                         @endforeach
                         </tbody>
                     </table>
