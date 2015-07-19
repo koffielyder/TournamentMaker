@@ -325,6 +325,7 @@
                 </div>
             </div>
         </div>
+    <!--The push div is required for the footer!-->
     <div class="push"></div>
 
 

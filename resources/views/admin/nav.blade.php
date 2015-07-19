@@ -8,8 +8,16 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Tournament Maker Alpha</title>
 
+    <!--If you want to change the pagetitle on a specific page, use '$pageTitle = "";' -->
+    <title>
+    <?php
+    if ($pageTitle)
+    {echo $pageTitle;}
+    else
+    {echo"Tournament Hosting Alpha";}
+    ?>
+    </title>
 
 
 	<!-- Latest compiled and minified CSS -->
@@ -62,18 +70,22 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
 
 	@yield('content')
 
-	<!-- Scripts -->
 
+    <!--Make sure the 'push' div is above the footer in the content page-->
     <div class="navbar navbar-bottom"><center>
         <p class="text-muted credit">Made by Nico and Thom. © 2015. Check us on github:</p>
         <iframe src="https://ghbtns.com/github-btn.html?user=koffielyder&repo=tournamentmaker&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe></iframe>
     </center></div>
+
+
+    <!-- Scripts (at the bottom for faster loading) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
 
 </body>
