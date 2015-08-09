@@ -55,7 +55,7 @@
                                       <option value="Jungle">Jungle</option>
                                       <option value="Mid">Mid</option>
                                       <option value="Adc">Adc</option>
-                                      <option value="Supp">Supp</option>
+                                      <option value="Supp">Support</option>
                                   </select>
                               </div>
                             </div>
